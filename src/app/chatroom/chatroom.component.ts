@@ -93,8 +93,7 @@ export class ChatroomComponent implements OnInit {
       roomuser = snapshotToArray(resp);
       const user = roomuser.find(x => x.nickname === this.nickname);
       if (user !== undefined) {
-        const userRef = firebase.default.database().ref('roomusers/' + user.key);
-        userRef.update({status: 'offline'});
+      
       }
     });
 

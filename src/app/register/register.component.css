@@ -1,0 +1,42 @@
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+   color: #fff;
+}
+
+mat-toolbar {
+  margin-bottom: 20px;
+}
+
+mat-card {
+  width: 30%;
+  margin: 10% auto;
+  border-radius: 8px;
+}
+mat-form-field, mat-checkbox {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+.login-button {
+  margin-top: 20px;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+}
+.googleBtn{
+  background-color: #4285F4;
+  color: #fff;
+}
+.redirectToLogin {
+  text-align: center;
+}
+
+.redirect {
+  color: #673ab7;
+  cursor: pointer;
+  text-decoration: none;
+ }

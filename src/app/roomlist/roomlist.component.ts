@@ -37,29 +37,24 @@ chatuser = [];
       this.rooms = snapshotToArray(resp);
       this.isLoadingResults = false;
     });
-    this.uid = localStorage.getItem('key');
+    this.uid = localStorage.getItem('uid');
 
     const newUser = firebase.default.database().ref('users/').on('value', (resp: any) => {
+
      let chatuser = snapshotToArray(resp);
 
        for (let user of Object.values(chatuser)){
         if (user['nickname'] ==  this.nickname){
-       // localStorage.setItem('nickname', login.nickname);
-      this.uid = localStorage.setItem('uid',user.key);
-          console.log(user.key);
+     
+     // this.uid = localStorage.setItem('uid',user.key);
+       
         }
        if (user['nickname'] !==  this.nickname){
         this.chatuser.push(user);
 
-       // console.log(this.chatuser);
+       
        }
        }
-
-      //  Object.keys(chatuser).forEach(function (key) {
-      //   //console.log(this.nickname);
-      //  //  console.log(chatuser[key] );
-
-      //  });
 
 
     });
@@ -101,7 +96,7 @@ chatuser = [];
     this.router.navigate(['/chatroom', roomname]);
   }
   gotoChat(nickname,key) {
-  
+
     sessionStorage.setItem("uid",key);
     sessionStorage.setItem("name", nickname);
 

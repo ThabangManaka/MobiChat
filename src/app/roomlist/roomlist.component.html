@@ -1,10 +1,10 @@
 <div class="example-container mat-elevation-z8">
   <h3>{{nickname}} <button mat-flat-button (click)="logout()"><mat-icon>logout</mat-icon></button></h3>
   <h2>Room List</h2>
-  <div class="example-loading-shade"
+  <!-- <div class="example-loading-shade"
        *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-  </div>
+  </div> -->
   <div class="button-row">
     <button mat-flat-button color="primary" [routerLink]="['/addroom']"><mat-icon>add</mat-icon></button>
   </div>
@@ -21,9 +21,13 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="enterChatRoom(row.roomname)"></tr>
     </table>
+   
     <mat-card *ngFor="let user of chatuser">
       <mat-card-content>
-         <a (click)="gotoChat(user.nickname, user.key)"> {{user.nickname}}</a>
+        <div  >
+          <a [routerLink]="['/chat/',user.key]"> {{user.nickname}}</a>
+        </div>
+
      </mat-card-content>
     </mat-card>
   </div>

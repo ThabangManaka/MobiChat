@@ -26,6 +26,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AddroomComponent } from './addroom/addroom.component';
 import { RoomlistComponent } from './roomlist/roomlist.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ChatroomComponent } from './chatroom/chatroom.component';
     LoginComponent,
     AddroomComponent,
     RoomlistComponent,
-    ChatroomComponent
+    ChatroomComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

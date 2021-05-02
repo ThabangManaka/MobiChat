@@ -1,0 +1,94 @@
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center;">Sign Up</mat-card-title>
+    <mat-card-content>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="User Name"
+            required
+            name="nickname"
+            ngModel
+            #nickname="ngModel">
+          <mat-icon matSuffix>perm_identity</mat-icon>
+          <mat-error
+            *ngIf="nickname.invalid">
+            nickname is required
+          </mat-error>
+
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Email"
+            required
+            name="email"
+            ngModel
+            #email="ngModel">
+            <mat-error *ngIf="email.invalid">Email is required</mat-error>
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                #password="ngModel">
+                <mat-error
+                  *ngIf="password.errors && password.errors.required">
+                  Password is required
+                </mat-error>
+                <mat-error
+                  *ngIf="password.errors && password.errors.minlength">
+                  Password must be of length 6
+                </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+
+            </mat-form-field>
+            <mat-form-field>
+              <input
+              matInput
+              placeholder="Password"
+              type="password"
+              required
+              minlength="6"
+              name="repassword"
+              ngModel
+              #repassword="ngModel">
+              <mat-error
+                *ngIf="repassword.errors && repassword.errors.required">
+                Re-Enter Password is required
+              </mat-error>
+            <mat-icon matSuffix>lock</mat-icon>
+          </mat-form-field>
+          <button
+          mat-raised-button
+          color="primary"
+          class="login-button" [disabled]="!f.valid">
+          Sign Up
+         </button>
+
+              <!-- Continue with Google -->
+
+        <!-- <button   mat-raised-button type="button" class=" login-button btn googleBtn"  (click)="GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Continue with Google
+        </button> -->
+
+
+      <div class="redirectToLogin">
+        <span>Already have an account? <span class="redirect" routerLink="/login">Log In</span></span>
+      </div>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+

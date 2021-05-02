@@ -1,26 +1,30 @@
-.example-container {
-  position: relative;
-  padding: 5px;
+mat-card {
+  width: 30%;
+  margin: 10% auto;
+  border-radius: 8px;
 }
-
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+mat-form-field, mat-checkbox {
+  width: 80%;
+  display: block;
+  margin: auto;
 }
-
-.example-full-width {
-  width: 100%;
+.login-button {
+  margin-top: 20px;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
 }
-
-.example-full-width:nth-last-child(0) {
-  margin-bottom: 10px;
+p {
+  text-align: center;
 }
-
-.button-row {
-  margin: 10px 0;
+p a {
+ color: #673ab7;
+ cursor: pointer;
+ text-decoration: none;
 }
-
-.mat-flat-button {
-  margin: 5px;
+.forgotPassword{
+  margin-top: -4px;
+  margin-bottom: 5px;;
+  text-align: center;
+  cursor: pointer;
 }
