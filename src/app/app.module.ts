@@ -17,7 +17,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { DatePipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+
 import { ChatComponent } from './chat/chat.component';
 import { LoginComponent } from './login/login.component';
 import {AngularFireModule} from '@angular/fire';
@@ -31,7 +31,7 @@ import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+   
     ChatComponent,
     LoginComponent,
     AddroomComponent,
